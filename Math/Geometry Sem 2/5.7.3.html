@@ -1,0 +1,3626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- /ActivityLaunch/showAnswer.jsp -->
+
+
+
+
+
+
+
+
+
+<!-- app:PrintCollection/ -->
+
+
+
+<html>
+<head>
+<title>Preview</title>
+
+    
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAEAWF9QGwEGUFJRAgYE"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-971.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script><style>
+        .myborder {
+            BORDER-BOTTOM: solid black 1px;
+            BORDER-LEFT: solid black 1px;
+            BORDER-RIGHT: solid black 1px;
+            BORDER-TOP: solid black 1px;
+            MARGIN: 1px
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="http://ace-prd.apexlearning.com/apps/AceWeb/includes/ace.css">
+	<link rel="stylesheet" href="http://ace-prd.apexlearning.com/apps/AceWeb//ActivityLaunch/SIAincludes/cpopupInsideSIAPage_apexStyles.css" type="text/css" media="screen" />
+    <META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+    <script Language="JavaScript" SRC="http://ace-prd.apexlearning.com/apps/AceWeb/includes/functions.js"></script>
+
+    <script language="JavaScript">
+
+        // set document such that we don't have cross site JavaScript issue
+        document.domain = "apexlearning.com";
+    
+        if (document.images) {
+
+            var previewon = new Image();
+                previewon.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/previewon.jpg";
+            var previewover = new Image();
+                previewover.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/previewover.jpg";
+
+            var closeon = new Image();
+                closeon.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/closeon.jpg";
+            var closeover = new Image();
+                closeover.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/closeover.jpg";
+        }
+    </script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" MARGINWIDTH="0" MARGINHEIGHT="0" LEFTMARGIN="0" TOPMARGIN="0" RIGHTMARGIN="0" 
+STYLE="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#6699CC">
+  <tr> 
+    <td width="70%" height="22" bgcolor="#6699CC">&nbsp;</td>
+    <td width="100" valign="middle" bgcolor="#6699CC">
+        <a href="showPreview.do?activityID=566664" onMouseOver="imgOver('preview')" onMouseOut="imgOn('preview')"><img name="preview" src="http://ace-prd.apexlearning.com/apps/AceWeb/images/previewon.jpg" border="0"></a>
+    </td>
+    <td width="100" valign="middle" bgcolor="#6699CC">
+        <a href="JavaScript:window.top.close();" onMouseOver="imgOver('close')" onMouseOut="imgOn('close')"><img name="close" src="http://ace-prd.apexlearning.com/apps/AceWeb/images/closeon.jpg" border="0"></a>
+    </td>
+    <td width="5%" bgcolor="#6699CC">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+  <tr>
+    <td width="100%" height="36" bgcolor="#CCCCCC">
+        <img src="http://ace-prd.apexlearning.com/apps/AceWeb/images/sp.gif" width="20" height="1">
+        <font class="activitytitle">Quiz: Simulations</font>
+    </td>
+  </tr>
+</table>
+
+
+<!--Loop through and render the questions -->
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763876">Question 1a of 10</a></font></b>
+(
+2
+ Random Numbers
+ 766260
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>In a randomly generated list of numbers from 0 to 6, what is the chance that each number will occur?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770541" src="http://media.apexlearning.com/Images/201105/15/d943e056-6931-4633-b946-9e64c5c1d261.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770542" src="http://media.apexlearning.com/Images/201105/15/9b85fb81-71d2-426a-a899-c04105e1d452.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770543" src="http://media.apexlearning.com/Images/201105/15/32c18c91-a34f-4e78-ac96-dced8619aa4e.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770544" src="http://media.apexlearning.com/Images/201105/15/d654c067-5b02-4ff9-b245-bbb968dd03c6.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770543" src="http://media.apexlearning.com/Images/201105/15/32c18c91-a34f-4e78-ac96-dced8619aa4e.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763877">Question 1b of 10</a></font></b>
+(
+2
+ Random Numbers
+ 766261
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>In a randomly generated list of numbers from 0 to 7, what is the chance that each number will occur?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770545" src="http://media.apexlearning.com/Images/201105/15/834176d6-3324-492c-82f6-4814f4cd9885.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770546" src="http://media.apexlearning.com/Images/201105/15/1a936466-1500-4f85-9db9-2f09850643a5.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770547" src="http://media.apexlearning.com/Images/201105/15/d4b0a701-c71d-4c84-89c9-38b595b028b1.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770548" src="http://media.apexlearning.com/Images/201105/15/e5861c84-bdd3-4406-9e70-5d39fa006711.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770546" src="http://media.apexlearning.com/Images/201105/15/1a936466-1500-4f85-9db9-2f09850643a5.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763878">Question 1c of 10</a></font></b>
+(
+2
+ Random Numbers
+ 766262
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>In a randomly generated list of numbers from 0 to 8, what is the chance that each number will occur?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770549" src="http://media.apexlearning.com/Images/201105/15/bf4e32e4-3314-4aae-9670-d0fcf3abd094.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770550" src="http://media.apexlearning.com/Images/201105/15/35d7170d-a984-4f10-b344-3bc30cb291ba.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770551" src="http://media.apexlearning.com/Images/201105/15/d7362eee-13ba-4bf7-832b-987889f33fce.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770552" src="http://media.apexlearning.com/Images/201105/15/bdf8e304-b62f-44fa-bb0d-46b1c28057b7.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770549" src="http://media.apexlearning.com/Images/201105/15/bf4e32e4-3314-4aae-9670-d0fcf3abd094.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763879">Question 2a of 10</a></font></b>
+(
+2
+ Simulations
+ 766245
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose that a randomly generated list of numbers from 0 to 9 is being used to simulate an event that has a probability of success of 80%. Which of these groups of numbers could represent a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7, 8</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0, 1, 2, 3, 4, 5, 6, 7.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763880">Question 2b of 10</a></font></b>
+(
+2
+ Simulations
+ 766246
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose that a randomly generated list of numbers from 0 to 9 is being used to simulate an event that has a probability of success of 70%. Which of these groups of numbers could represent a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7, 8</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0, 1, 2, 3, 4, 5, 6.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763881">Question 2c of 10</a></font></b>
+(
+2
+ Simulations
+ 766247
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose that a randomly generated list of numbers from 0 to 9 is being used to simulate an event that has a probability of success of 60%. Which of these groups of numbers could represent a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0, 1, 2, 3, 4, 5, 6, 7, 8</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0, 1, 2, 3, 4, 5.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763882">Question 3a of 10</a></font></b>
+(
+3
+ Simulations
+ 766255
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A randomly generated list of numbers from 0 to 4 is being used to simulate an event, with the numbers 2, 3, and 4 representing a success. What is the estimated probability of a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">25%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">40%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">60%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">75%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 60%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763883">Question 3b of 10</a></font></b>
+(
+3
+ Simulations
+ 766256
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A randomly generated list of numbers from 0 to 4 is being used to simulate an event, with the numbers 3 and 4 representing a success. What is the estimated probability of a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">25%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">40%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">60%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">75%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 40%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763884">Question 3c of 10</a></font></b>
+(
+3
+ Simulations
+ 766257
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A randomly generated list of numbers from 0 to 4 is being used to simulate an event, with the number 4 representing a success. What is the estimated probability of a success?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">20%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">25%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">75%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">80%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 20%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763885">Question 4a of 10</a></font></b>
+(
+1
+ Random Numbers
+ 766237
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A graphing calculator can produce a list of random numbers.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder"><b>True</b></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><b>False</b></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: True.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763886">Question 4b of 10</a></font></b>
+(
+1
+ Random Numbers
+ 766238
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A computer can produce a list of random numbers.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder"><b>True</b></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><b>False</b></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: True.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763887">Question 4c of 10</a></font></b>
+(
+1
+ Random Numbers
+ 766239
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>A computer cannot produce a list of random numbers.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><b>True</b></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><b>False</b></td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: False.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763888">Question 5a of 10</a></font></b>
+(
+2
+ Simulations
+ 766270
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose the following set of random numbers is being used to simulate the event of a basketball player making three free throws in a row. How should the numbers be rearranged?<br><br>
+
+860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">860  583  785  814  010  122  337  198  621  549  034  076  796  495  978  078  433  330  333  153</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">8605  8378  5814  0101  2233  7198  6215  4903  4076  7964  9597  8078  4333  3033  3153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">86058  37858  14010  12233  71986  21549  03407  67964  95978  07843  33303  33153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 860  583  785  814  010  122  337  198  621  549  034  076  796  495  978  078  433  330  333  153.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763889">Question 5b of 10</a></font></b>
+(
+2
+ Simulations
+ 766271
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose the following set of random numbers is being used to simulate the event of a basketball player making four free throws in a row. How should the numbers be rearranged?<br><br>
+
+860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">860  583  785  814  010  122  337  198  621  549  034  076  796  495  978  078  433  330  333  153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">8605  8378  5814  0101  2233  7198  6215  4903  4076  7964  9597  8078  4333  3033  3153</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">86058  37858  14010  12233  71986  21549  03407  67964  95978  07843  33303  33153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 8605  8378  5814  0101  2233  7198  6215  4903  4076  7964  9597  8078  4333  3033  3153.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763890">Question 5c of 10</a></font></b>
+(
+2
+ Simulations
+ 766272
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose the following set of random numbers is being used to simulate the event of a basketball player making five free throws in a row. How should the numbers be rearranged?<br><br>
+
+860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">860  583  785  814  010  122  337  198  621  549  034  076  796  495  978  078  433  330  333  153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">8605  8378  5814  0101  2233  7198  6215  4903  4076  7964  9597  8078  4333  3033  3153</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">86058  37858  14010  12233  71986  21549  03407  67964  95978  07843  33303  33153</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">860583  785814  010122  337198  621549  034076  796495  978078  433330  333153</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 86058  37858  14010  12233  71986  21549  03407  67964  95978  07843  33303  33153.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763891">Question 6a of 10</a></font></b>
+(
+3
+ Simulations
+ 766277
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The estimated probability of a bowler getting a strike during a particular frame is 63%. If several simulations of the bowler bowling two frames were performed, in what percentage of the simulations would the bowler be most likely to get a strike in each of the two frames?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">18%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">38%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">61%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">81%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 38%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763892">Question 6b of 10</a></font></b>
+(
+3
+ Simulations
+ 766278
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The estimated probability of a bowler getting a strike during a particular frame is 41%. If several simulations of the bowler bowling two frames were performed, in what percentage of the simulations would the bowler be most likely to get a strike in each of the two frames?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">18%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">38%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">61%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">81%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 18%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763893">Question 6c of 10</a></font></b>
+(
+3
+ Simulations
+ 766279
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The estimated probability of a bowler getting a strike during a particular frame is 79%. If several simulations of the bowler bowling two frames were performed, in what percentage of the simulations would the bowler be most likely to get a strike in each of the two frames?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">18%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">38%</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">61%</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">81%</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 61%.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763894">Question 7a of 10</a></font></b>
+(
+2
+ Simulations
+ 766289
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The following set of random numbers represents 20 simulations of three daily flights from Philadelphia to Seattle, with 0, 1, 2, or 3 representing a late departure and 4, 5, 6, 7, 8, or 9 representing an on-time departure. In how many of the simulations was there an on-time departure for all three flights?<br><br>
+
+506  619  535  769  096  380  527  555  737  192  092  658  694  320  442  812  968  765 374  282</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">3</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">4</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">5</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">6</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 6.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763895">Question 7b of 10</a></font></b>
+(
+2
+ Simulations
+ 766290
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The following set of random numbers represents 20 simulations of three daily flights from Philadelphia to Seattle, with 0, 1, 2, or 3 representing a late departure and 4, 5, 6, 7, 8, or 9 representing an on-time departure. In how many of the simulations was there an on-time departure for all three flights?<br><br>
+
+506  619  535  769  096  380  527  555  737  192  092  658  694  320  442  812  968  763 374  282</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">3</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">4</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">5</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">6</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 5.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763896">Question 7c of 10</a></font></b>
+(
+2
+ Simulations
+ 766291
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>The following set of random numbers represents 20 simulations of three daily flights from Philadelphia to Seattle, with 0, 1, 2, or 3 representing a late departure and 4, 5, 6, 7, 8, or 9 representing an on-time departure. In how many of the simulations was there an on-time departure for all three flights?<br><br>
+
+506  619  535  769  096  380  527  555  737  192  092  658  691  320  442  812  968  763 374  282</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">3</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">4</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">5</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">6</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 4.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763897">Question 8a of 10</a></font></b>
+(
+2
+ Simulations
+ 766296
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of these numbers of simulations of an event would be most likely to produce results that are closest to those predicted by probability theory?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">5</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">10</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">15</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">20</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 20.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763898">Question 8b of 10</a></font></b>
+(
+2
+ Simulations
+ 766297
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of these numbers of simulations of an event would be most likely to produce results that are closest to those predicted by probability theory?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">10</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">15</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">20</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">25</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 25.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763899">Question 8c of 10</a></font></b>
+(
+2
+ Simulations
+ 766298
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of these numbers of simulations of an event would be most likely to produce results that are closest to those predicted by probability theory?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">30</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">25</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">20</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">15</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 30.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763900">Question 9a of 10</a></font></b>
+(
+3
+ Simulations
+ 766300
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 22.4% chance of a particular soccer player making four penalty shots in a row. If the soccer player taking four penalty shots is simulated 2500 times, in about how many of the simulations would you expect at least one missed shot?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">56</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">194</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">560</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">1940</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 1940.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763901">Question 9b of 10</a></font></b>
+(
+3
+ Simulations
+ 766301
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 77.6% chance of a particular soccer player making two penalty shots in a row. If the soccer player taking two penalty shots is simulated 2500 times, in about how many of the simulations would you expect at least one missed shot?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">56</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">194</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">560</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">1940</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 560.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763902">Question 9c of 10</a></font></b>
+(
+3
+ Simulations
+ 766302
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 2.8% chance of a particular soccer player making six penalty shots in a row. If the soccer player taking six penalty shots is simulated 2500 times, in about how many of the simulations would you expect at least one missed shot?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">7</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">70</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">243</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">2430</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 2430.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763903">Question 10a of 10</a></font></b>
+(
+3
+ Simulations
+ 766309
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 44% chance of a water polo team winning any particular match. If the water polo team playing two matches is simulated 10,000 times, in about how many of the simulations would you expect them to win exactly one match?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">1936</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">2464</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">3136</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">4928</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 4928.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763904">Question 10b of 10</a></font></b>
+(
+3
+ Simulations
+ 766310
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 76% chance of a water polo team winning any particular match. If the water polo team playing two matches is simulated 10,000 times, in about how many of the simulations would you expect them to win exactly one match?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">576</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">1824</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">3648</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">5776</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 3648.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763905">Question 10c of 10</a></font></b>
+(
+3
+ Simulations
+ 766311
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Probability theory predicts that there is a 9% chance of a water polo team winning any particular match. If the water polo team playing two matches is simulated 10,000 times, in about how many of the simulations would you expect them to win exactly one match?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">81</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">819</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">1638</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">8281</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 1638.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"d162371932","agent":"","beacon":"bam.nr-data.net","applicationTime":5,"applicationID":"26433573","transactionName":"NFYGbUtZVhAAUxUKDQ0cLmppF3kAFVkXChYafwVMV1tQTBJYDhQjDUATXEsWUhAR","queueTime":0}</script></body>
+</html>

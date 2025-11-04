@@ -1,0 +1,3638 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- /ActivityLaunch/showAnswer.jsp -->
+
+
+
+
+
+
+
+
+
+<!-- app:PrintCollection/ -->
+
+
+
+<html>
+<head>
+<title>Preview</title>
+
+    
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAEAWF9QGwEGUFJRAgYE"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script><style>
+        .myborder {
+            BORDER-BOTTOM: solid black 1px;
+            BORDER-LEFT: solid black 1px;
+            BORDER-RIGHT: solid black 1px;
+            BORDER-TOP: solid black 1px;
+            MARGIN: 1px
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="http://ace-prd.apexlearning.com/apps/AceWeb/includes/ace.css">
+	<link rel="stylesheet" href="http://ace-prd.apexlearning.com/apps/AceWeb//ActivityLaunch/SIAincludes/cpopupInsideSIAPage_apexStyles.css" type="text/css" media="screen" />
+    <META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+    <script Language="JavaScript" SRC="http://ace-prd.apexlearning.com/apps/AceWeb/includes/functions.js"></script>
+
+    <script language="JavaScript">
+
+        // set document such that we don't have cross site JavaScript issue
+        document.domain = "apexlearning.com";
+    
+        if (document.images) {
+
+            var previewon = new Image();
+                previewon.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/previewon.jpg";
+            var previewover = new Image();
+                previewover.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/previewover.jpg";
+
+            var closeon = new Image();
+                closeon.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/closeon.jpg";
+            var closeover = new Image();
+                closeover.src = "http://ace-prd.apexlearning.com/apps/AceWeb/images/closeover.jpg";
+        }
+    </script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" MARGINWIDTH="0" MARGINHEIGHT="0" LEFTMARGIN="0" TOPMARGIN="0" RIGHTMARGIN="0" 
+STYLE="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#6699CC">
+  <tr> 
+    <td width="70%" height="22" bgcolor="#6699CC">&nbsp;</td>
+    <td width="100" valign="middle" bgcolor="#6699CC">
+        <a href="showPreview.do?activityID=566659" onMouseOver="imgOver('preview')" onMouseOut="imgOn('preview')"><img name="preview" src="http://ace-prd.apexlearning.com/apps/AceWeb/images/previewon.jpg" border="0"></a>
+    </td>
+    <td width="100" valign="middle" bgcolor="#6699CC">
+        <a href="JavaScript:window.top.close();" onMouseOver="imgOver('close')" onMouseOut="imgOn('close')"><img name="close" src="http://ace-prd.apexlearning.com/apps/AceWeb/images/closeon.jpg" border="0"></a>
+    </td>
+    <td width="5%" bgcolor="#6699CC">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+  <tr>
+    <td width="100%" height="36" bgcolor="#CCCCCC">
+        <img src="http://ace-prd.apexlearning.com/apps/AceWeb/images/sp.gif" width="20" height="1">
+        <font class="activitytitle">Quiz: Independence</font>
+    </td>
+  </tr>
+</table>
+
+
+<!--Loop through and render the questions -->
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763846">Question 1a of 10</a></font></b>
+(
+2
+ Independent Events
+ 766139
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are independent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">Knowing that it is going to rain tomorrow, and bringing an umbrella to school</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">Knowing that you have a test in school tomorrow, and studying the night before</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">Knowing that you have to get up early tomorrow, and going to bed before 9 p.m.</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">Knowing that it is going to rain tomorrow, and going to bed before 9 p.m.</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Knowing that it is going to rain tomorrow, and going to bed before 9 p.m.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763847">Question 1b of 10</a></font></b>
+(
+2
+ Independent Events
+ 766140
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are independent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">Knowing that it is going to rain tomorrow, and bringing an umbrella to school</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">Knowing that you have a test in school tomorrow, and studying the night before</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">Knowing that it is going to rain tomorrow, and doing your homework</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">Knowing that you have to get up early tomorrow, and going to bed before 9 p.m.</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Knowing that it is going to rain tomorrow, and doing your homework.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763848">Question 1c of 10</a></font></b>
+(
+2
+ Independent Events
+ 766141
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are independent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">Knowing that it is going to rain tomorrow, and bringing an umbrella to school</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">Knowing that you have a test in school tomorrow, and bringing an umbrella to school</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">Knowing that you have a test in school tomorrow, and studying the night before</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">Knowing that you have to get up early tomorrow, and going to bed before 9 p.m.</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Knowing that you have a test in school tomorrow, and bringing an umbrella to school.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763849">Question 2a of 10</a></font></b>
+(
+1
+ Independent Events
+ 766135
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>If <i>A</i> and <i>B</i> are independent events, then it <i>must</i> be true that <img border="0" align="absmiddle" id="770099" src="http://media.apexlearning.com/Images/201105/13/0418b9af-8044-47fc-b2a7-019818a69890.gif" title="" alt="">.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>True</b>
+                </b>
+                </b></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>False</b>
+                </b>
+                </b></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: True.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763850">Question 2b of 10</a></font></b>
+(
+1
+ Independent Events
+ 766136
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>If <i>A</i> and <i>B</i> are independent events, then it <i>must</i> be true that <img border="0" align="absmiddle" id="770100" src="http://media.apexlearning.com/Images/201105/13/59562373-962e-4f13-992b-b0ed74555a99.gif" title="" alt="">.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>True</b>
+                </b>
+                </b></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>False</b>
+                </b>
+                </b></td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: False.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763851">Question 2c of 10</a></font></b>
+(
+1
+ Independent Events
+ 766137
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>True-False</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>If <i>A</i> and <i>B</i> are independent events, then it <i>must</i> be true that <img border="0" align="absmiddle" id="770101" src="http://media.apexlearning.com/Images/201105/13/22579acb-d79a-4603-a0b0-9d4ff6d9dba5.gif" title="" alt="">.</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>True</b>
+                </b>
+                </b></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><b>
+                  <b>
+                  <b>False</b>
+                </b>
+                </b></td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: False.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763852">Question 3a of 10</a></font></b>
+(
+3
+ Independent Events
+ 766144
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770102" src="http://media.apexlearning.com/Images/201105/13/4baea5cf-a345-40c0-b128-a41009bc1689.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770103" src="http://media.apexlearning.com/Images/201105/13/8a6c40a0-dac3-4e6e-84a5-71f0e081ad0b.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770104" src="http://media.apexlearning.com/Images/201105/13/644a94e6-05ef-4cbd-8474-eed7045cb9d8.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.12</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0.27</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.3</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.9</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.27.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763853">Question 3b of 10</a></font></b>
+(
+3
+ Independent Events
+ 766145
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770106" src="http://media.apexlearning.com/Images/201105/13/913bc359-bb29-48a2-a1fa-10734f98cd78.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770107" src="http://media.apexlearning.com/Images/201105/13/2ba16eda-bfd9-4274-a65f-ad756d42f71b.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770108" src="http://media.apexlearning.com/Images/201105/13/59ae02b2-78b8-4c9e-84e4-63bbbf5db834.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.08</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0.12</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.2</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.6</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.12.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763854">Question 3c of 10</a></font></b>
+(
+3
+ Independent Events
+ 766146
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770110" src="http://media.apexlearning.com/Images/201105/13/f21ecf86-9eac-43d3-8c70-4358e55b5c76.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770111" src="http://media.apexlearning.com/Images/201105/13/238f423a-9df8-4ece-b60c-9d0e88b277b2.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770112" src="http://media.apexlearning.com/Images/201105/13/98587e75-a946-45d6-a8ca-fdd4d0e774bf.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.15</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0.56</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.7</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.8</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.56.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763855">Question 4a of 10</a></font></b>
+(
+3
+ Independent Events
+ 766148
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>What is the probability of getting heads when flipping a coin <i>and</i> getting a number greater than or equal to 3 when rolling a single die?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770118" src="http://media.apexlearning.com/Images/201105/13/2274ba32-89b4-4259-8746-b10455b6a9f4.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770119" src="http://media.apexlearning.com/Images/201105/13/495be0ba-60d6-430c-bef8-2e2f2b47bf9c.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770120" src="http://media.apexlearning.com/Images/201105/13/bf42807d-4fa5-45f6-8a2a-3e389ea317e6.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770121" src="http://media.apexlearning.com/Images/201105/13/25c146b9-adb4-4ccf-85de-704fbffdf792.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770121" src="http://media.apexlearning.com/Images/201105/13/25c146b9-adb4-4ccf-85de-704fbffdf792.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763856">Question 4b of 10</a></font></b>
+(
+3
+ Independent Events
+ 766149
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>What is the probability of getting heads when flipping a coin <i>and</i> getting a number greater than or equal to 4 when rolling a single die?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770122" src="http://media.apexlearning.com/Images/201105/13/ed047466-1414-44ac-a330-0938a6a05706.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770123" src="http://media.apexlearning.com/Images/201105/13/cfa0e077-d381-4815-8045-00cc1d531e6d.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770124" src="http://media.apexlearning.com/Images/201105/13/65e46643-276b-4364-9958-91e2f49b6b2e.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770125" src="http://media.apexlearning.com/Images/201105/13/1239d6c4-f6a4-4f85-a835-0db4f76e5286.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770124" src="http://media.apexlearning.com/Images/201105/13/65e46643-276b-4364-9958-91e2f49b6b2e.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763857">Question 4c of 10</a></font></b>
+(
+3
+ Independent Events
+ 766150
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>What is the probability of getting heads when flipping a coin <i>and</i> getting a number greater than or equal to 5 when rolling a single die?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770127" src="http://media.apexlearning.com/Images/201105/13/c5eb7473-b16c-4bb7-8336-e99af962b5eb.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770128" src="http://media.apexlearning.com/Images/201105/13/1ce93ea8-a172-49d0-a6db-84da4e7b4b55.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770129" src="http://media.apexlearning.com/Images/201105/13/10fa2455-6c08-4f20-b3ea-06afc4241f64.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770130" src="http://media.apexlearning.com/Images/201105/13/ddfe6f4e-0275-4200-94db-2ca177d26faf.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770128" src="http://media.apexlearning.com/Images/201105/13/1ce93ea8-a172-49d0-a6db-84da4e7b4b55.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763858">Question 5a of 10</a></font></b>
+(
+3
+ Independent Events
+ 766153
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose you have a <img border="0" align="absmiddle" id="770135" src="http://media.apexlearning.com/Images/201105/13/27569d0d-bc9c-4145-aaa1-3929108e5dd6.gif" title="" alt=""> chance of winning with a scratch-off lottery ticket. If you buy 3 tickets, what is the probability of winning with all 3?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770131" src="http://media.apexlearning.com/Images/201105/13/403afa9e-2b2a-4557-a7f4-9c7ddfc6937d.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770132" src="http://media.apexlearning.com/Images/201105/13/fa718f5f-07fe-4b17-81c5-8d109923416d.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770133" src="http://media.apexlearning.com/Images/201107/17/23ca2e0f-3905-45be-aacd-4dde4eef9497.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770134" src="http://media.apexlearning.com/Images/201107/17/d6efadd2-b47b-4136-91ed-1c1137e10a30.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770132" src="http://media.apexlearning.com/Images/201105/13/fa718f5f-07fe-4b17-81c5-8d109923416d.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763859">Question 5b of 10</a></font></b>
+(
+3
+ Independent Events
+ 766154
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose you have a <img border="0" align="absmiddle" id="770141" src="http://media.apexlearning.com/Images/201105/13/f17e2855-bb9f-4f0e-bb2a-c85483dadc59.gif" title="" alt=""> chance of winning with a scratch-off lottery ticket. If you buy 4 tickets, what is the probability of winning with all 4?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770137" src="http://media.apexlearning.com/Images/201105/13/1d522914-db66-42ef-bbab-1e1711c17c8f.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770138" src="http://media.apexlearning.com/Images/201105/13/9b6b20f7-edc5-4d5a-815f-1c81d3745dfe.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770139" src="http://media.apexlearning.com/Images/201107/17/1d533e63-4a7a-43c0-b884-d87001805c9c.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770140" src="http://media.apexlearning.com/Images/201107/17/ad68a046-a96a-4401-aa1c-fd1a15c19e9f.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770139" src="http://media.apexlearning.com/Images/201107/17/1d533e63-4a7a-43c0-b884-d87001805c9c.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763860">Question 5c of 10</a></font></b>
+(
+3
+ Independent Events
+ 766155
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose you have a <img border="0" align="absmiddle" id="770147" src="http://media.apexlearning.com/Images/201105/13/6364aca2-5d15-4843-8b98-97b30b7cd0c1.gif" title="" alt=""> chance of winning with a scratch-off lottery ticket. If you buy 5 tickets, what is the probability of winning with all 5?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770143" src="http://media.apexlearning.com/Images/201105/13/d94071e9-2fe2-4214-9e93-5ae56ca55971.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770144" src="http://media.apexlearning.com/Images/201105/13/bb6a1ceb-a8fb-4603-93f4-3c231e3ea401.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770145" src="http://media.apexlearning.com/Images/201107/17/c40760c0-27b6-4a29-aeed-81c504e55b2e.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770146" src="http://media.apexlearning.com/Images/201107/17/53808012-d920-444f-8e6e-e388589f6771.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770146" src="http://media.apexlearning.com/Images/201107/17/53808012-d920-444f-8e6e-e388589f6771.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763861">Question 6a of 10</a></font></b>
+(
+2
+ Independent Events
+ 766157
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>According to the tree diagram below, what is the probability that someone buys a book that is paperback and fiction?<br><br><img border="0" align="absmiddle" id="770148" src="http://media.apexlearning.com/Images/201108/10/f9d3b69c-0061-48d4-bea8-a55abcd6e439.jpg" title="" alt=""></td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.1575</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.1925</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">0.2925</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.3575</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.2925.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763862">Question 6b of 10</a></font></b>
+(
+2
+ Independent Events
+ 766158
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>According to the tree diagram below, what is the probability that someone buys a book that is paperback and nonfiction?<br><br><img border="0" align="absmiddle" id="770148" src="http://media.apexlearning.com/Images/201108/10/f9d3b69c-0061-48d4-bea8-a55abcd6e439.jpg" title="" alt=""></td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.1575</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.1925</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.2925</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">0.3575</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.3575.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763863">Question 6c of 10</a></font></b>
+(
+2
+ Independent Events
+ 766159
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>According to the tree diagram below, what is the probability that someone buys a book that is hardcover and nonfiction?<br><br><img border="0" align="absmiddle" id="770148" src="http://media.apexlearning.com/Images/201108/10/f9d3b69c-0061-48d4-bea8-a55abcd6e439.jpg" title="" alt=""></td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.1575</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0.1925</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.2925</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.3575</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.1925.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763864">Question 7a of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766163
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are dependent events. If <img border="0" align="absmiddle" id="770156" src="http://media.apexlearning.com/Images/201105/13/2268eaa4-4bcf-4d5b-8c37-907864b3ad82.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770157" src="http://media.apexlearning.com/Images/201105/13/d6ffd912-f7e4-42bd-952e-b3b41eaa7032.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770158" src="http://media.apexlearning.com/Images/201105/13/7bb2b568-74c9-4533-a585-c0cc1d0c4897.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">0.2</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.25</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.8</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.85</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.2.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763865">Question 7b of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766164
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are dependent events. If <img border="0" align="absmiddle" id="770161" src="http://media.apexlearning.com/Images/201105/13/958b05cd-2d80-4f88-b632-cdab1b639c80.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770162" src="http://media.apexlearning.com/Images/201105/13/e8964ad9-7c00-428d-b849-cf37ef600730.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770163" src="http://media.apexlearning.com/Images/201105/13/dcaebca0-d5fa-488a-816c-5000ff30c7bc.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">0.15</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.2</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.6</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.65</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.15.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763866">Question 7c of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766165
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are dependent events. If <img border="0" align="absmiddle" id="770165" src="http://media.apexlearning.com/Images/201105/13/bb168bdd-9255-454d-a8d6-72cb0b43c28f.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770166" src="http://media.apexlearning.com/Images/201105/13/e5917cc9-eda5-4982-b618-96915ca75ddb.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770167" src="http://media.apexlearning.com/Images/201105/13/0460203c-c7cf-409d-8872-64ecd81e54bc.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.45</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.4</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.15</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">0.1</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.1.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763867">Question 8a of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766167
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose a bag contains 4 white chips and 6 black chips. What is the probability of randomly choosing a white chip, not replacing it, and then randomly choosing another white chip?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770172" src="http://media.apexlearning.com/Images/201105/13/dec647f8-fc74-492c-9767-e9c02ead371e.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770173" src="http://media.apexlearning.com/Images/201105/13/97438ea0-3b52-43b7-8783-f5cb869a898f.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770174" src="http://media.apexlearning.com/Images/201105/13/86e6275c-14ba-4874-b84f-01ed5e847319.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770175" src="http://media.apexlearning.com/Images/201105/13/1055fb79-58db-4801-a490-4824d7daedc5.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770172" src="http://media.apexlearning.com/Images/201105/13/dec647f8-fc74-492c-9767-e9c02ead371e.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763868">Question 8b of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766168
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose a bag contains 4 white chips and 6 black chips. What is the probability of randomly choosing a black chip, not replacing it, and then randomly choosing another black chip?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770177" src="http://media.apexlearning.com/Images/201105/13/c09e91d8-3f16-4784-9a34-3c396af11141.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770178" src="http://media.apexlearning.com/Images/201105/13/2686afdf-fa20-423f-8ae9-efdf3827932e.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770179" src="http://media.apexlearning.com/Images/201105/13/14f9f9d0-cf3d-4732-9351-6716926eae7b.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770180" src="http://media.apexlearning.com/Images/201105/13/02053627-2e4e-4bfb-9490-3a19f0471633.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770178" src="http://media.apexlearning.com/Images/201105/13/2686afdf-fa20-423f-8ae9-efdf3827932e.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763869">Question 8c of 10</a></font></b>
+(
+3
+ Dependent Events
+ 766169
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose a bag contains 8 white chips and 2 black chips. What is the probability of randomly choosing a white chip, not replacing it, and then randomly choosing another white chip?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770184" src="http://media.apexlearning.com/Images/201105/13/969dea6c-ba46-4226-96bf-1a186292e4e8.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770185" src="http://media.apexlearning.com/Images/201105/13/93a12024-13b1-46a6-9ea0-d3c77ce10d70.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770186" src="http://media.apexlearning.com/Images/201105/13/c0f76f3a-78eb-4c8a-a090-cfe6ea6e74c2.gif" title="" alt=""></td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder"><img border="0" align="absmiddle" id="770187" src="http://media.apexlearning.com/Images/201105/13/ccf01fb3-4464-4f0d-9934-87b87adfe3ea.gif" title="" alt=""></td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: <img border="0" align="absmiddle" id="770186" src="http://media.apexlearning.com/Images/201105/13/c0f76f3a-78eb-4c8a-a090-cfe6ea6e74c2.gif" title="" alt="">.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763870">Question 9a of 10</a></font></b>
+(
+2
+ Dependent Events
+ 766171
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are dependent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">Drawing a king from a deck of cards, replacing it, and then drawing another king</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">Flipping a coin and getting tails, and then flipping it again and getting tails again</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">Rolling a die and getting 2, and then rolling it again and getting 2 again</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">Drawing a 6 from a deck of cards, not replacing it, and then drawing another 6</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Drawing a 6 from a deck of cards, not replacing it, and then drawing another 6.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763871">Question 9b of 10</a></font></b>
+(
+2
+ Dependent Events
+ 766172
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are dependent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*A.</b>
+</td>
+<td class="myborder">Drawing a king from a deck of cards, not replacing it, and then drawing another king</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">Flipping a coin and getting tails, and then flipping it again and getting tails again</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">Rolling a die and getting 2, and then rolling it again and getting 2 again</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">Drawing a 6 from a deck of cards, replacing it, and then drawing another 6</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Drawing a king from a deck of cards, not replacing it, and then drawing another king.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763872">Question 9c of 10</a></font></b>
+(
+2
+ Dependent Events
+ 766173
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Which of the following are dependent events?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">Drawing a king from a deck of cards, replacing it, and then drawing another king</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">Flipping a coin and getting tails, and then flipping it again and getting tails again</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">Drawing a 2 from a deck of cards, not replacing it, and then drawing another 2</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">Rolling a die and getting 6, and then rolling it again and getting 6 again</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: Drawing a 2 from a deck of cards, not replacing it, and then drawing another 2.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763873">Question 10a of 10</a></font></b>
+(
+3
+ Independent Events
+ 766175
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770194" src="http://media.apexlearning.com/Images/201105/13/f9938c55-3a05-4541-9c41-7c02ee4659c8.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770195" src="http://media.apexlearning.com/Images/201105/13/2ed982f9-a2d3-42c8-9a7a-5102f2e476b3.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770196" src="http://media.apexlearning.com/Images/201107/17/ac9cdbbd-557e-4c89-8297-c670fbdf59cf.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.04</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*B.</b>
+</td>
+<td class="myborder">0.06</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.36</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.54</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.06.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763874">Question 10b of 10</a></font></b>
+(
+3
+ Independent Events
+ 766176
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770200" src="http://media.apexlearning.com/Images/201105/13/33b956bb-8e77-4751-bc86-30cdfa58a8e4.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770201" src="http://media.apexlearning.com/Images/201105/13/bc5b01f6-5072-472e-b5fa-22f95546af79.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770202" src="http://media.apexlearning.com/Images/201108/10/c26486d4-fd7d-4cd0-b3e4-ab2e18ac9593.gif" height="20" width="61" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.04</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.06</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*C.</b>
+</td>
+<td class="myborder">0.36</td>
+<td class="myborder">Correct!</td>
+</tr>
+<tr>
+<td class="myborder">
+<b>D.</b>
+</td>
+<td class="myborder">0.54</td>
+<td class="myborder"></td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.36.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+    <!-- Question Header -->
+    <br>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr> 
+            <td width="26">&nbsp;</td>
+            <td colspan=2>
+                <b><font size="4"><a name="Question1763875">Question 10c of 10</a></font></b>
+(
+3
+ Independent Events
+ 766177
+)
+
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Attempts: </b></td>          
+            <td>1</td>     
+        </tr>
+
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Question Type: </b></td>         
+            <td>Multiple Choice</td>       
+        </tr>
+        
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td width="160"><b>Maximum Score: </b></td>         
+            <td>2</td>        
+        </tr>
+
+  
+        <tr>
+            <td width="26">&nbsp;</td>
+            <td valign="top"><b>Question: </b></td>         
+            <td>Suppose <i>A</i> and <i>B</i> are independent events. If <img border="0" align="absmiddle" id="770207" src="http://media.apexlearning.com/Images/201105/13/8c9e7246-994d-44e0-b18b-ae2496d2074e.gif" title="" alt=""> and <img border="0" align="absmiddle" id="770208" src="http://media.apexlearning.com/Images/201105/13/0febcedf-75f4-4d84-b4ae-d7e3ab725e58.gif" title="" alt="">, what is <img border="0" align="absmiddle" id="770209" src="http://media.apexlearning.com/Images/201107/17/14aae2e5-362d-498c-80d4-912065d7c829.gif" title="" alt="">?</td>       
+        </tr>
+
+    </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" bordercolor="red">
+                <tr>
+                <td width="26">&nbsp;</td>
+                <td>
+                <table class="myborder" cellpadding="3" cellspacing="0"  border="1" bordercolor="#000000">
+
+                    <tr>
+                    <td class="myborder" width="5%">&nbsp;</td>
+                    <td class="myborder">
+                        <b>Choice</b>
+                    </td>
+
+<td width="45%" class="myborder"><b>Feedback</b></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>A.</b>
+</td>
+<td class="myborder">0.04</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>B.</b>
+</td>
+<td class="myborder">0.06</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td class="myborder">
+<b>C.</b>
+</td>
+<td class="myborder">0.36</td>
+<td class="myborder"></td>
+</tr>
+<tr>
+<td bgcolor="#008000" class="myborder">
+<b>*D.</b>
+</td>
+<td class="myborder">0.54</td>
+<td class="myborder">Correct!</td>
+</tr>
+
+            </table>
+
+            </td>
+            </tr>
+        </table>
+
+      
+        <table border="0" cellpadding="3" cellspacing="0" bordercolor="green">
+            <tr>    
+            <td width="250">&nbsp;</td>
+
+            <td>
+                <table class="myborder" cellpadding="3" cellspacing="0" border="1" bordercolor="#000000">
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    <b>Global Incorrect Feedback</b>
+                </td>               
+                </tr>
+
+                <tr>                    
+                <td width="305" class="myborder">
+                    The correct answer is: 0.54.
+                </td>               
+                </tr>
+
+                </table>
+            </td>
+            </tr>
+        </table>
+<hr width="95%">
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"d162371932","agent":"","beacon":"bam.nr-data.net","applicationTime":3,"applicationID":"26433573","transactionName":"NFYGbUtZVhAAUxUKDQ0cLmppF3kAFVkXChYafwVMV1tQTBJYDhQjDUATXEsWUhAR","queueTime":0}</script></body>
+</html>
