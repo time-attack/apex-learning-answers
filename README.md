@@ -7,6 +7,7 @@
 
 Welcome to the **ultimate source for all Apex Learning answers!**  
 This repository has every single apex learning answer there is out there! just look through the files to find your quiz and download the pdf!
+You can also read below on how to get the BEST Apex Learning hack. This below hack will give you all the apex learning answers. So STOP SEARCHING, because you found the best repository!
 ----------
 
  The BEST Tool: Examripper Extension
