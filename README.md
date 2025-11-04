@@ -18,6 +18,21 @@ Looking for the easiest way to get Apex Learning answers? **Examripper** is the 
 
 **[Click here to get Examripper from the Chrome Web Store!](https://chromewebstore.google.com/detail/apex-learning-hack-ixl-ha/deepanfkojflalfajnkcnlhiejeomdgk)**
 
+## How to get the Answers
+
+## 🧑‍💻 Examripper Extension Installation Tutorial
+
+**Follow these quick steps to install Examripper:**
+
+1.  **Click the Examripper Chrome Web Store link above**
+    
+2.  Hit **"Add to Chrome"**
+    
+3.  Go to Apex Learning, open a quiz or assignment, and click the Examripper icon ( bottom right corner)
+    
+4.  Click start and watch the quiz be solved instantly!
+    
+
 ----------
 
 ## 📚 How This Repository Works
@@ -33,20 +48,7 @@ Looking for the easiest way to get Apex Learning answers? **Examripper** is the 
 
 ----------
 
-## 🧑‍💻 Examripper Extension Installation Tutorial
 
-**Follow these quick steps to install Examripper:**
-
-1.  **Click the Examripper Chrome Web Store link above**
-    
-2.  Hit **"Add to Chrome"**
-    
-3.  Pin the Examripper icon for fast access (click the puzzle piece in your browser)
-    
-4.  Go to Apex Learning, open a quiz or assignment, and click the Examripper icon
-    
-5.  Instantly view answers, explanations, and more!
-    
 
 ----------
 
