@@ -5,9 +5,8 @@
  # All Apex Learning Answers 🌟
  ![Apex Learning Logo](https://github.com/time-attack/apex-learning-answers/blob/main/apexlogo.png?raw=true)
 
-Welcome to the **ultimate source for all Apex Learning answers, tips, and hacks!**  
-This repository is dedicated to helping you master the Apex Learning platform, saving time and boosting productivity. Just use the Extension below to finish everything!
-
+Welcome to the **ultimate source for all Apex Learning answers!**  
+This repository has every single apex learning answer there is out there! just look through the files to find your quiz and download the pdf!
 ----------
 
  The BEST Tool: Examripper Extension
