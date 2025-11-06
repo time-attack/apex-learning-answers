@@ -1,14 +1,17 @@
 
 
-
+<center>
 
  # All Apex Learning Answers 🌟
  ![Apex Learning Logo](https://github.com/time-attack/apex-learning-answers/blob/main/apexlogo.png?raw=true)
 
-Welcome to the **ultimate source for all Apex Learning answers!**  
-This repository has every single apex learning answer there is out there! just look through the files to find your quiz and download the pdf!
-You can also read below on how to get the BEST Apex Learning hack. This below hack will give you all the apex learning answers. So STOP SEARCHING, because you found the best repository!
+This repository has all of the Apex Learning Answers!
+Simply go to the files and find your quiz and you will see them!
+
+If you want to know how to get all the apex learning quiz test and CST answers you have came to the right place.
 ----------
+</center>
+
 
  The BEST Tool: Examripper Extension
 
