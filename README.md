@@ -75,7 +75,4 @@ Use these resources responsibly and follow your school's guidelines for academic
 # Join the discord!
 
 [Click here to join the discord server](https://discord.gg/examripper)
-----------
 
-Make your README the coolest on GitHub—your repo now stands out!  
-Would you like even more advanced formatting, or is this style perfect?
